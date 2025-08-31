@@ -1,16 +1,10 @@
 class Solution:
     def reverse(self, x: int) -> int:
-        revNum = 0
-        intMax = 2**31 - 1
-        intMin = -2**31
-        isNegative = x < 0
-        x = abs(x)
+        sign = -1 if x < 0 else 1
+        x *= sign
+        rev = 0
         while x > 0:
-            lastDigit = x % 10
-            x = x // 10
-            revNum = revNum * 10 + lastDigit
-        if isNegative:
-            revNum = -revNum
-        if revNum < intMin or revNum > intMax:
-            return 0
-        return revNum
+            rev = rev * 10 + x % 10
+            x //= 10
+        rev *= sign
+        return rev if -2**31 <= rev <= 2**31 - 1 else 0
