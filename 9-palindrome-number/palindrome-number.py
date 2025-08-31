@@ -7,10 +7,3 @@ class Solution:
             reversed_half = reversed_half * 10 + x % 10
             x //= 10
         return x == reversed_half or x == reversed_half // 10
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        if (x >= 0):
-            a = str(x)
-            return a == a[::-1]
-        else:
-            return False
