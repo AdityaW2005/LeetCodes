@@ -18,3 +18,7 @@ class Solution:
             finalBinaryValue = str(dec % 2) + finalBinaryValue
             dec //= 2  
         return finalBinaryValue
+
+# class Solution:
+#     def addBinary(self, a: str, b: str) -> str:
+#         return bin(int(a,2)+int(b,2)).split('b')[1]
