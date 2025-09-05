@@ -8,9 +8,9 @@ class Solution:
         ans = 1  # will track floor sqrt
 
         while left <= right:
-            mid = (left + right) // 2
+            mid = left + (right - left) // 2
 
-            # Compare mid * mid with x without overflow
+            # Compare mid*mid with x without overflow
             if mid <= x // mid:
                 ans = mid           # mid^2 <= x, mid is a candidate
                 left = mid + 1      # try larger
