@@ -1,18 +1,8 @@
 class Solution:
-    def getNext(self, n: int) -> int:
-        """
-        Calculates the sum of the squares of the digits of a number.
-        """
-        total_sum = 0
-        while n > 0:
-            n, digit = divmod(n, 10)
-            total_sum += digit ** 2
-        return total_sum
-
     def isHappy(self, n: int) -> bool:
         """
         Determines if a number is a "happy number" using Floyd's Cycle-Finding Algorithm.
-        This approach uses O(1) space.
+        All logic is inlined within this single function.
 
         Args:
             n: A positive integer.
@@ -23,12 +13,28 @@ class Solution:
         slow = n
         fast = n
 
+        # A do-while loop is simulated since the first iteration must always run.
         while True:
-            slow = self.getNext(slow)
-            fast = self.getNext(self.getNext(fast))
+            # Advance slow pointer by one step
+            s_slow = 0
+            temp_slow = slow
+            while temp_slow > 0:
+                temp_slow, digit = divmod(temp_slow, 10)
+                s_slow += digit * digit
+            slow = s_slow
 
-            if fast == 1:
-                return True
+            # Advance fast pointer by two steps
+            for _ in range(2):
+                s_fast = 0
+                temp_fast = fast
+                while temp_fast > 0:
+                    temp_fast, digit = divmod(temp_fast, 10)
+                    s_fast += digit * digit
+                fast = s_fast
             
+            # If pointers meet, a cycle is found. Break the loop.
             if slow == fast:
-                return False
+                break
+        
+        # If the cycle is at 1, the number is happy.
+        return slow == 1
