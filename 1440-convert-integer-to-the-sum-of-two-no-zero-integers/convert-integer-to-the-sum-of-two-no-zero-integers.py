@@ -7,7 +7,6 @@
 #             if not has_zero(a) and not has_zero(b):
 #                 return [a, b]
 
-from typing import List
 
 class Solution:
     def getNoZeroIntegers(self, n: int) -> List[int]:
