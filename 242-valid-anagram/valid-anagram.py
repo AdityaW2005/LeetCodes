@@ -12,4 +12,5 @@ class Solution:
         #         return False  
         # return count == len(t)
 
-        return Counter(s) == Counter(t)
+        #return Counter(s) == Counter(t)
+        return sorted(s) == sorted(t)
