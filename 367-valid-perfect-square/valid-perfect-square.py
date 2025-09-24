@@ -4,7 +4,6 @@ class Solution:
 
         # low = 1
         # right = num
-
         # while low <= right:
         #     mid = (low+right)//2
         #     res = mid * mid
