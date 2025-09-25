@@ -1,10 +1,9 @@
 class Solution:
     def thirdMax(self, nums: List[int]) -> int:
-        set_nums = set(nums)
-        
-        if len(set_nums) < 3:
-            return max(set_nums)
+        sets = set(nums)
+        if len(sets) <= 2:
+            return max(sets)
         else:
-            for _ in range(2):
-                set_nums.remove(max(set_nums))
-            return max(set_nums)
+            for i in range(2):
+                sets.remove(max(sets))
+            return max(sets)
