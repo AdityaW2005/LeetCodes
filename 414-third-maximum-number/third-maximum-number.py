@@ -1,18 +1,9 @@
 class Solution:
     def thirdMax(self, nums: List[int]) -> int:
-        first = second = third = None
-        
-        for num in nums:
-            if num == first or num == second or num == third:
-                continue
-            if first is None or num > first:
-                third = second
-                second = first
-                first = num
-            elif second is None or num > second:
-                third = second
-                second = num
-            elif third is None or num > third:
-                third = num
-        
-        return third if third is not None else first
+        sets = set(nums)
+        if len(sets) <= 2:
+            return max(sets)
+        else:
+            for i in range(2):
+                sets.remove(max(sets))
+            return max(sets)
