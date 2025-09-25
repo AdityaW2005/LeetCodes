@@ -1,37 +1,22 @@
-import java.util.Set;
-import java.util.HashSet;
-
 class Solution {
     public int thirdMax(int[] nums) {
-        Set<Integer> set = new HashSet<>();
-        for (int num : nums) {
-            set.add(num);
+        Integer first = null, second = null, third = null;
+        
+        for (Integer num : nums) {
+            if (num.equals(first) || num.equals(second) || num.equals(third)) {
+                continue;
+            }
+            if (first == null || num > first) {
+                third = second;
+                second = first;
+                first = num;
+            } else if (second == null || num > second) {
+                third = second;
+                second = num;
+            } else if (third == null || num > third) {
+                third = num;
+            }
         }
-        if (set.size() <= 2) {
-            int max = Integer.MIN_VALUE;
-            for (int num : set) {
-                if (num > max) {
-                    max = num;
-                }
-            }
-            return max;
-        } else {
-            for (int i = 0; i < 2; i++) {
-                int max = Integer.MIN_VALUE;
-                for (int num : set) {
-                    if (num > max) {
-                        max = num;
-                    }
-                }
-                set.remove(max);
-            }
-            int max = Integer.MIN_VALUE;
-            for (int num : set) {
-                if (num > max) {
-                    max = num;
-                }
-            }
-            return max;
-        }
+        return (third == null) ? first : third;
     }
 }
