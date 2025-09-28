@@ -7,5 +7,11 @@ class Solution:
             evenIndexSum += int(i)
         for i in a[1 :: 2]:
             oddIndexSum += int(i)
-        print(oddIndexSum, evenIndexSum)
-        return evenIndexSum - oddIndexSum 
+        return evenIndexSum - oddIndexSum
+
+        # Other Way of Approach
+
+        # ans = 0
+        # for i, c in enumerate(str(n)):
+        #     ans += int(c) * (-1) ** i
+        # return ans
