@@ -3,7 +3,7 @@ class Solution:
         if n <= 2:
             return 0
         
-        b = [False] * n  # Boolean array to mark non-primes
+        b = [False] * n  
         count = 0
         
         for i in range(2, int(n ** 0.5) + 1):
