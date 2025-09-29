@@ -7,6 +7,3 @@ class Solution:
         if (dividend > 0 and divisor < 0) or (dividend < 0 and divisor > 0):
             return math.ceil(dividend / divisor)
         return 0
-        
-        
-        
