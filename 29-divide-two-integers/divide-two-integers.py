@@ -6,8 +6,6 @@ class Solution:
             return math.floor(dividend / divisor)
         if (dividend > 0 and divisor < 0) or (dividend < 0 and divisor > 0):
             return math.ceil(dividend / divisor)
-        if dividend == divisor == -1:
-            return 1
         if dividend == 0:
             return 0
         
