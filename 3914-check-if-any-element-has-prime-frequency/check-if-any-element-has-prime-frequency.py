@@ -10,7 +10,8 @@ class Solution:
             return True
         for i in nums:
             l.append(nums.count(i))
-        for i in l:
+        s = set(l)
+        for i in s:
             if is_prime(i):
                 return True
         return False
