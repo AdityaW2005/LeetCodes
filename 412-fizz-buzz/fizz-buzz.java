@@ -1,4 +1,3 @@
-import java.util.*;
 class Solution {
     public List<String> fizzBuzz(int n) {
         ArrayList<String> list = new ArrayList<>();
