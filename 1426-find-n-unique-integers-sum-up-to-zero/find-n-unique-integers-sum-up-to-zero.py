@@ -2,8 +2,7 @@ class Solution:
     def sumZero(self, n: int) -> List[int]:
         l = []
         
-        if n == 1:
-            return [0]
+        
         
         if n % 2 == 1:
             l.append(0)
