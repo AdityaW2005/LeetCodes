@@ -11,4 +11,6 @@ class Solution:
             return "scalene"
         elif a == b or b == c or a == c:
             return "isosceles"
+        else:
+            pass
         
