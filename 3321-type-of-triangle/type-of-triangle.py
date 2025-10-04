@@ -7,10 +7,8 @@ class Solution:
             return "none"
         elif a == b == c:
             return "equilateral"
-        elif (a + b > c or b + c > a or a + c > b) and (a != b and b != c and a != c):
-            return "scalene"
         elif a == b or b == c or a == c:
             return "isosceles"
         else:
-            pass
+            return "scalene"
         
