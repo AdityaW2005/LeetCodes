@@ -11,4 +11,3 @@ class Solution:
             return "isosceles"
         else:
             return "scalene"
-        
