@@ -10,8 +10,7 @@ class Solution {
     public int digitSum(int x){
         int sumOfDigit = 0;
         while (x > 0){
-            int digit = x % 10;
-            sumOfDigit += digit;
+            sumOfDigit += x % 10;
             x /= 10;
         }
         return sumOfDigit;
