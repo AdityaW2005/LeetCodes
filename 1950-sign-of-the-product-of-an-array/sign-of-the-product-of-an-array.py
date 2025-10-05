@@ -7,11 +7,8 @@ class Solution:
                 return 1
             else:
                 return -1
+
         prod = 1
         for i in nums:
-            if i == 0:
-                prod = 0
-                break
             prod *= i
         return signFunc(prod)
-        
