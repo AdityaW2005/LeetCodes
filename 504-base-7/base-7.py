@@ -4,8 +4,8 @@ class Solution:
             return "0"
         neg = num < 0
         n = abs(num)
-        a = ""
+        res = ""
         while n > 0:
-            a = str(n % 7) + a
+            res = str(n % 7) + res
             n //= 7
-        return "-" + a if neg else a
+        return "-" + res if neg else res
