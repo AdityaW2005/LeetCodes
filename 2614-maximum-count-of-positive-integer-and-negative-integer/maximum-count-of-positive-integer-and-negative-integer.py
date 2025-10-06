@@ -1,7 +1,6 @@
 class Solution:
     def maximumCount(self, nums: List[int]) -> int:
-        posCount = 0
-        negCount = 0
+        posCount, negCount = 0, 0
         for i in nums:
             if i > 0:
                 posCount += 1
