@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 class Solution {
     public int findGCD(int[] nums) {
-        int a = Arrays.stream(nums).min().getAsInt();
-        int b = Arrays.stream(nums).max().getAsInt();
+        int a = Arrays.stream(nums).max().getAsInt();
+        int b = Arrays.stream(nums).min().getAsInt();
         return gcd(a, b);
     }
 
