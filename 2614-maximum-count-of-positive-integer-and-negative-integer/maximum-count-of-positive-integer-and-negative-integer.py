@@ -7,9 +7,4 @@ class Solution:
                 posCount += 1
             elif i < 0:
                 negCount += 1
-            else:
-                pass
-        if posCount > negCount:
-            return posCount
-        else:
-            return negCount
+        return max(posCount, negCount)
