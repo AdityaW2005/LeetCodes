@@ -1,15 +1,8 @@
 class Solution:
     def checkTwoChessboards(self, coordinate1: str, coordinate2: str) -> bool:
-        d = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8}
-        l = []
-        if (coordinate1[0] in d.keys()) and (d[coordinate1[0]] + int(coordinate1[-1])) % 2 == 0:    
-            l.append(True)
-        else:
-            l.append(False)
+        return self._is_black(coordinate1) == self._is_black(coordinate2)
 
-        if (coordinate2[0] in d.keys()) and (d[coordinate2[0]] + int(coordinate2[-1])) % 2 == 0:   
-            l.append(True)
-        else:
-            l.append(False)
-        return l[0] == l[-1]
-        
+    def _is_black(self, coord: str) -> bool:
+        file_num = ord(coord[0]) - ord('a') + 1
+        rank = int(coord[1])
+        return ((file_num + rank) % 2) == 0
