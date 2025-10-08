@@ -4,4 +4,5 @@ class Solution:
         while n > 0:
             baseKDigitSum += n % k
             n //= k
+            
         return baseKDigitSum
