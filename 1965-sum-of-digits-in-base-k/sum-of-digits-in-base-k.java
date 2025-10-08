@@ -5,6 +5,7 @@ class Solution {
             baseKDigitSum += n % k;
             n /= k;
         }
+        
         return baseKDigitSum;
     }
 }
