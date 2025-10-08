@@ -1,15 +1,7 @@
 class Solution:
     def sumBase(self, n: int, k: int) -> int:
-        baseK = ""
+        baseKDigitSum = 0
         while n > 0:
-            baseK = str(n % k) + baseK
+            baseKDigitSum += n % k
             n //= k
-        
-        value = int(baseK)
-        digitSum = 0
-        
-        while value > 0:
-            digitSum += value % 10
-            value //= 10
-        
-        return digitSum
+        return baseKDigitSum
