@@ -12,4 +12,5 @@ class Solution:
                 n //= 10
             if ok:
                 selfDivNums.append(i)
+                
         return selfDivNums
