@@ -7,6 +7,7 @@ class Solution:
         
         value = int(baseK)
         digitSum = 0
+        
         while value > 0:
             digitSum += value % 10
             value //= 10
