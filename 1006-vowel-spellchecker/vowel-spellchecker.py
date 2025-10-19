@@ -1,7 +1,3 @@
-import re
-from collections import defaultdict
-from typing import List
-
 class Solution:
     def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:
         def devowel(word):
