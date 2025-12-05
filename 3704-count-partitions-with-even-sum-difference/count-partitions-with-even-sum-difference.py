@@ -1,5 +1,8 @@
 class Solution:
     def countPartitions(self, nums: List[int]) -> int:
+        # Brute - Force Solution
+
+        """
         n = len(nums)
         count = 0
         totalSum = []
@@ -17,3 +20,13 @@ class Solution:
                 count += 1
 
         return count
+        """
+
+        # Optimized Solution
+
+        total = sum(nums)
+        n = len(nums)
+        if (total % 2 != 0):
+            return 0
+        return n - 1
+        
