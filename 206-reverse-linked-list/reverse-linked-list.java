@@ -23,8 +23,8 @@ class Solution {
         return newHead;
         */
 
-        // Optimal Approach
 
+        // Optimal Approach
         ListNode prev = null;
         ListNode temp = head;
 
