@@ -39,7 +39,7 @@ class Solution {
             second = second.next;
         }
 
-        reverseLL(newHead);
+        //reverseLL(newHead);
         return true;
     }
 
