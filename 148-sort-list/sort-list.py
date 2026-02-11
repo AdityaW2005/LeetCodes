@@ -5,6 +5,8 @@
 #         self.next = next
 class Solution:
     def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        # Brute Force Approach
+        
         arr = []
         temp = head
 
