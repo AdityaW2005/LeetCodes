@@ -1,7 +1,10 @@
-import java.util.*;
-
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-        return nums.length != new HashSet<>(Arrays.asList(Arrays.stream(nums).boxed().toArray(Integer[]::new))).size();
+        HashSet<Integer> set = new HashSet<>();
+        for (int i : nums){
+            set.add(i);
+        }
+
+        return set.size() != nums.length;
     }
 }
