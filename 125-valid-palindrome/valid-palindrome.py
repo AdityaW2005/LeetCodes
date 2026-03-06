@@ -3,10 +3,8 @@ class Solution:
         l = []
 
         for i in s:
-            if i.isalpha():
+            if i.isalnum():
                 l.append(i.lower())
-            elif i.isdigit():
-                l.append(i)
             else:
                 pass
         
