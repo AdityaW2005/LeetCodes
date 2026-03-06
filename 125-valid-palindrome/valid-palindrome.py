@@ -10,7 +10,7 @@ class Solution:
         
         i, j = 0, len(l) - 1
 
-        while i < j:
+        while (i < j):
             if l[i] == l[j]:
                 i += 1
                 j -= 1
