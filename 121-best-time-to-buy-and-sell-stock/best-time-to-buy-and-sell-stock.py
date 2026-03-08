@@ -3,11 +3,11 @@ class Solution:
         min_stock = prices[0]
         max_profit = 0
 
-        for i in prices:
-            if i < min_stock:
-                min_stock = i
+        for stock in prices:
+            if stock < min_stock:
+                min_stock = stock
             else:
-                profit = i - min_stock
+                profit = stock - min_stock
                 if profit > max_profit:
                     max_profit = profit
         
