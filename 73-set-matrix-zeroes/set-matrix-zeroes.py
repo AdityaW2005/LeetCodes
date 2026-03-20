@@ -4,7 +4,7 @@ class Solution:
         Do not return anything, modify matrix in-place instead.
         """
         m, n = len(matrix), len(matrix[0])
-        row, col = [0 for i in range(m)], [0] * n
+        row, col = [0 for _ in range(m)], [0] * n
 
         for i in range(m):
             for j in range(n):
