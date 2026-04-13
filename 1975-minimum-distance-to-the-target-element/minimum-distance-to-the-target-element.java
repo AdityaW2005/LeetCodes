@@ -5,7 +5,6 @@ class Solution {
         for (int right = nums.length - 1; right >= 0; right--) {
             if (nums[right] == target) 
                 minDist = Math.min(minDist, Math.abs(right - start));
-            
         }
 
         return minDist;
