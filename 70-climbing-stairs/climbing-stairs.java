@@ -1,12 +1,16 @@
 class Solution {
     public int climbStairs(int n) {
-        if (n <= 2) return n;
-        int a = 1, b = 2; // ways(1), ways(2)
-        for (int i = 3; i <= n; i++) {
-            int temp = a + b;
-            a = b;
-            b = temp;
-        }
-        return b;
+        int dp[] = new int[n + 1];
+        Arrays.fill(dp, -1);
+        return helper(n, dp);
+    }
+
+    public int helper(int n, int dp[]) {
+        if (n == 0 || n == 1)
+            return 1;
+        if (dp[n] != -1)
+            return dp[n];
+        dp[n] = helper(n - 1, dp) + helper(n - 2, dp);
+        return dp[n];
     }
 }
