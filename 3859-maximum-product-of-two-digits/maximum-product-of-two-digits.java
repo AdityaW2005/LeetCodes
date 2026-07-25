@@ -1,19 +1,19 @@
 class Solution {
     public int maxProduct(int n) {
-        int a = 0; 
-        int b = 0; 
-        int x = n;
-        if (x == 0) return 0; 
-        while (x > 0) {
-            int d = x % 10;
-            if (d >= a) {
-                b = a;
-                a = d;
-            } else if (d > b) {
-                b = d;
-            }
-            x /= 10;
+        String val = String.valueOf(n);
+        char[] chars = val.toCharArray();
+        Arrays.sort(chars);
+        String value = new String(chars);
+        int num = Integer.parseInt(value);
+        int i = 1;
+        int prod = 1;
+
+        while (i >= 0) {
+            prod *= num % 10;
+            num /= 10;
+            i--;
         }
-        return a * b;
+
+        return prod;
     }
 }
