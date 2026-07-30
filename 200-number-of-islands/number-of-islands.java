@@ -26,6 +26,6 @@ class Solution {
         traverseIsland(grid, i, j + 1); // right
         traverseIsland(grid, i + 1, j); // down
         traverseIsland(grid, i, j - 1); // left
-        traverseIsland(grid, i - 1, j);     // up
+        traverseIsland(grid, i - 1, j); // up
     }
 }
