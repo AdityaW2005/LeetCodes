@@ -6,7 +6,6 @@ class Solution {
         
         int indegree[] = new int[numCourses];
         int topoSort[] = new int[numCourses];
-        int index = 0;
 
         for (int edge[] : prerequisites) {
             int course = edge[0];
@@ -16,6 +15,7 @@ class Solution {
         }
 
         Queue<Integer> queue = new LinkedList<>();
+        int index = 0;
 
         for (int i = 0; i < numCourses; i++) {
             if (indegree[i] == 0)
