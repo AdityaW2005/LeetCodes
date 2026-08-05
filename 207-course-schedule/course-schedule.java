@@ -9,8 +9,8 @@ class Solution {
         for (int edge[] : prerequisites) {
             int course = edge[0];
             int prerequisite = edge[1];
-            adj.get(course).add(prerequisite);
-            indegree[prerequisite]++;
+            adj.get(prerequisite).add(course);
+            indegree[course]++;
         }
 
         Queue<Integer> queue = new LinkedList<>();
