@@ -2,6 +2,7 @@ class Solution {
     public int missingMultiple(int[] nums, int k) {
         Set<Integer> set = new HashSet<>();
         int minVal = k;
+        
         for (int num : nums) 
             set.add(num);
         
