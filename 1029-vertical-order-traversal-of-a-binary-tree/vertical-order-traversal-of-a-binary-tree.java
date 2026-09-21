@@ -18,7 +18,7 @@ class Tuple {
     TreeNode node;
     int row; int col;
 
-    public Tuple(TreeNode _node, int _row, int _col) {
+    public Tuple (TreeNode _node, int _row, int _col) {
         node = _node;
         row = _row;
         col = _col;
@@ -28,8 +28,8 @@ class Tuple {
 class Solution {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>();
-        Queue<Tuple> queue = new LinkedList<Tuple>();
-        queue.offer(new Tuple(root, 0, 0));
+        Queue<Tuple> queue = new LinkedList<>();
+        queue.add(new Tuple(root, 0, 0));
 
         while (!queue.isEmpty()) {
             Tuple tuple = queue.poll();
@@ -40,7 +40,7 @@ class Solution {
             if (!map.containsKey(x))
                 map.put(x, new TreeMap<>());
             
-            if (!map.get(x).containsKey(y))
+            if (!map.get(x).containsKey(y)) 
                 map.get(x).put(y, new PriorityQueue<>());
             
             map.get(x).get(y).offer(node.val);
